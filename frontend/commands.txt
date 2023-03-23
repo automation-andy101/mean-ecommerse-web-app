@@ -1,0 +1,42 @@
+Run application:-
+nx serve <NAME OF APPLICATION HERE>       -   e.g. nx serve ngshop    -   nx serve ngshop --port 4100
+
+
+Create a new application:-
+nx generate @nrwl/angular:app <NAME OF APPLICATION HERE>
+
+
+Create a component:-
+cd here:- \\frontend\bluebits\ enter:-
+nx g component home-page --project=ngshop
+nx g component pages/home-page --project=ngshop
+
+
+To do a dry run you can do this:-
+nx g component home-page --project=ngshop --dry-run
+
+
+Create a new library using NX:-
+npx nx g @nrwl/workspace:lib ui --dry-run
+example of 'Name' input box:-
+pages/orders/orders-form
+
+
+Create a component using nx:-
+nx generate @schematics/angular:component --name=COMPONENT-NAME --project=ui --style=scss --export --selector=COMPONENT-NAME --no-interactive
+
+Build applicatons:-
+cd here first:-
+cd /frontend/bluebits/
+
+nx build admin      -   This creates the app in the 'bluebits/dist' folder
+nx build ngshop     -   This creates the app in the 'bluebits/dist' folder
+nx build ngshop --output-path docs --base-href /ngshop/      - use for GitHub 'dev' deployment -   This creates the app in the 'bluebits/docs' fold
+nx build admin --output-path docs --base-href /admin/      - use for GitHub 'dev' deployment -   This creates the app in the 'bluebits/docs' fold
+nx build ngshop --prod --output-path docs --base-href /ngshop/      - use for GitHub 'Prod' deployment -   This creates the app in the 'bluebits/docs' folder
+nx build ngshop --prod --output-path docs --base-href /admin/      - use for GitHub 'Prod' deployment  -   This creates the app in the 'bluebits/docs' folder
+nx build ngshop --prod --output-path ../ngshop --base-href /ngshop/      - use for AWS Amplify deployment -   This creates the app in the 'frontend/admin' folder
+nx build admin --prod --output-path ../admin --base-href /admin/      - use for AWS Amplify. Note: You will need to be in the 'bluebits' folder to run this - This creates the app in the 'frontend/ngshop' folder
+
+For the AWS ones cd into the ngshop and admin folders and create git repos (git init) in ythe following folders:-
+
